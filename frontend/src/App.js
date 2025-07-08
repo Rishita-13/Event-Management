@@ -6,7 +6,7 @@ import EventList from './components/EventList';
 export default function App() {
   const [events, setEvents] = useState([]);
   const fetchEvents = async () =>
-    setEvents((await axios.get('http://localhost:5000/api/events')).data);
+    setEvents((await axios.get('https://event-management-sa5j.onrender.com/api/events')).data);
 
   useEffect(() => { fetchEvents(); }, []);
 
