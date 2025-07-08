@@ -7,7 +7,7 @@ const EventList = ({ events, fetchEvents }) => {
   const [editDescription, setEditDescription] = useState('');
   const [editDate, setEditDate] = useState('');
 
-  // 👇 Replace with your deployed backend URL
+  // ✅ Correct backend URL base
   const backendURL = 'https://event-management-sa5j.onrender.com/api/events';
 
   const handleDelete = async (id) => {
@@ -16,6 +16,7 @@ const EventList = ({ events, fetchEvents }) => {
       fetchEvents();
     } catch (error) {
       console.error('Error deleting event:', error);
+      alert('Error deleting event: ' + error.message);
     }
   };
 
@@ -37,6 +38,7 @@ const EventList = ({ events, fetchEvents }) => {
       fetchEvents();
     } catch (error) {
       console.error('Error updating event:', error);
+      alert('Error updating event: ' + error.message);
     }
   };
 

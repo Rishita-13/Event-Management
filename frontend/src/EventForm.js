@@ -6,8 +6,8 @@ const EventForm = ({ fetchEvents }) => {
   const [description, setDescription] = useState('');
   const [date, setDate] = useState('');
 
-  // ✅ Replace localhost with your backend URL
-  const backendURL = 'https://event-management-sa5j.onrender.com';
+  // ✅ Correct backend URL with proper API path
+  const backendURL = 'https://event-management-sa5j.onrender.com/api/events';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,6 +19,7 @@ const EventForm = ({ fetchEvents }) => {
       setDate('');
     } catch (error) {
       console.error('Error creating event:', error);
+      alert('Error creating event: ' + error.message);
     }
   };
 
