@@ -7,9 +7,12 @@ const EventList = ({ events, fetchEvents }) => {
   const [editDescription, setEditDescription] = useState('');
   const [editDate, setEditDate] = useState('');
 
+  // 👇 Replace with your deployed backend URL
+  const backendURL = 'https://event-management-sa5j.onrender.com/api/events';
+
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/events/${id}`);
+      await axios.delete('https://event-management-sa5j.onrender.com/api/events');
       fetchEvents();
     } catch (error) {
       console.error('Error deleting event:', error);
@@ -25,7 +28,7 @@ const EventList = ({ events, fetchEvents }) => {
 
   const handleUpdate = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/events/${id}`, {
+      await axios.put('https://event-management-sa5j.onrender.com/api/events', {
         title: editTitle,
         description: editDescription,
         date: editDate,

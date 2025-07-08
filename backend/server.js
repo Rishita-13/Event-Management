@@ -6,7 +6,15 @@ import eventRoutes from './routes/events.js';
 
 dotenv.config();
 const app = express();
-app.use(cors());
+
+// ✅ Set your frontend URL here
+const allowedOrigins = ['https://eventnext.netlify.app/'];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
+
 app.use(express.json());
 app.use('/api/events', eventRoutes);
 
