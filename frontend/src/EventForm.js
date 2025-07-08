@@ -7,7 +7,7 @@ const EventForm = ({ fetchEvents }) => {
   const [date, setDate] = useState('');
 
   // ✅ Replace localhost with your backend URL
-  const backendURL = 'https://event-management-sa5j.onrender.com/api/events';
+  const backendURL = 'https://event-management-sa5j.onrender.com';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
