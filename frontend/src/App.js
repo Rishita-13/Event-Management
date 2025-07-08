@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div className="container">
       <h1>Event Management System</h1>
-      <EventForm onSave={fetchEvents} />
+      <EventForm fetchEvents={fetchEvents} />
       <hr />
       <EventList events={events} refresh={fetchEvents} />
     </div>
