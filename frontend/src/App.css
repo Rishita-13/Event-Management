@@ -1,0 +1,73 @@
+/* App.css */
+
+/* Background image for the whole page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('./assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Main white content box */
+.container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Event card style */
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Inputs and textarea */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.btn-blue {
+  background-color: #1976d2;
+}
+
+.btn-red {
+  background-color: #d32f2f;
+}
+
+.btn-ghost {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #0a3d62;
+}
