@@ -9,7 +9,7 @@ const EventList = ({ events, fetchEvents }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete('http://localhost:5000/api/events/${id}');
+      await axios.delete(`http://localhost:5000/api/events/${id}`);
       fetchEvents();
     } catch (error) {
       console.error('Error deleting event:', error);
@@ -25,7 +25,7 @@ const EventList = ({ events, fetchEvents }) => {
 
   const handleUpdate = async (id) => {
     try {
-      await axios.put('http://localhost:5000/api/events/${id}', {
+      await axios.put(`http://localhost:5000/api/events/${id}`, {
         title: editTitle,
         description: editDescription,
         date: editDate,

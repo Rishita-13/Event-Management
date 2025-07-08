@@ -9,7 +9,7 @@ const EventForm = ({ fetchEvents }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/events', { title, description, date });
+      await axios.post(`http://localhost:5000/api/events`, { title, description, date });
       fetchEvents();
       setTitle('');
       setDescription('');
